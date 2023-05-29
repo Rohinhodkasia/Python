@@ -1,0 +1,39 @@
+credentials :
+  password : "0pal1"
+  username : "amtvphy"
+  cu_ip :  "10.20.249.2"
+  ran_ip : "10.20.249.4"
+  core_ip : "10.20.249.1"
+  ue_ip : "10.20.249.6"
+
+Commands :
+  space : "df -h"
+  homespace : "df -h | grep home"
+  rootspace : "df -h | grep root "
+  Hugepages : "grep HugePages_Free /proc/meminfo"
+  Hugepages_total : "grep HugePages_Total /proc/meminfo"
+  Freehugepages : "sudo rm -rf /dev/hugepages/* /dev/shm/* /tmp/pubsub* /var/run/dpdk/*"
+  IRQStatus : "systemctl status irqbalance"
+  IRQKiller : "sudo systemctl stop irqbalance"
+
+  pods : "cd /home/stackuser/Cluster/ ;source np2-dev1.sh;kubectl get pods -owide"
+
+  ptpcheck : "sudo pmc -u -b 0 -d 44 'GET TIME_STATUS_NP' | grep master_offset"
+  upfcheck : "sudo docker ps | grep upf"
+
+  dubinary : "cd /opt/netprizm2/network/ran/fr1/du12/config; ls -lrt | grep test.xml"
+  cubinary : "cd /opt/netprizm2/network/ran/fr1/cu1/config ; ls -lrt | grep test.xml"
+
+  coreisolation : "cat /etc/default/grub | grep GRUB_CMDLINE_LINUX="
+
+  uevlocalpubsub : "cd /opt/netprizm2/network/vphy/pubsub_uerf/cfg ; cat pubsub.cfg "
+  uevuempcmd : "cd /opt/netprizm2/network/vphy/uemp/cfg; cat libpubsub.cfg"
+  uevcsm : "cd /opt/netprizm2/network/vphy/csm/cfg; cat csm.cfg"
+  uevuempuev : "cd /opt/netprizm2/network/vphy/uemp/cfg; cat uev-1-0.cfg"
+  uestack : "cd /opt/netprizm2/network/ue/cp; cat run_cp.sh"
+
+  ranlocalcmd : "cd /opt/netprizm2/network/vphy/pubsub_uerf/cfg ; cat pubsub.cfg "
+  rancsmcmd : "cd /opt/netprizm2/network/vphy/csm/cfg; cat csm.cfg"
+  ranranplib : "cd /opt/netprizm2/network/vphy/ranp/cfg; cat libpubsub.cfg"
+  ranranpranv : "cd /opt/netprizm2/network/vphy/ranp/cfg; cat root_sys_config.cfg"
+  fr1du11 : "cd /opt/netprizm2/network/ran/fr1/du12/config ;cat sys_config.txt"
