@@ -1,0 +1,79 @@
+modules : ["localpubsub","csm","uemp"]
+
+
+devcredentials :
+  password : "Nmn@cutie@8439"
+  username : "namang"
+ 
+
+sitcredential:
+  password : "!v0Ry3"
+  username : "amtsit"
+
+chvpaths :
+  chv : "cd /opt/netprizm2/network/vphy/chv/bin ; sudo ./vasocktest start"  
+
+
+devpath:
+  uev_localpubsub : "cd /opt/netprizm2/network/vphy/pubsub_local/bin; sudo ./localPubSub"
+  uev_csm : "cd /opt/netprizm2/network/vphy/csm/bin; sudo ./csm"
+  uev_uemp : "cd /opt/netprizm2/network/vphy/uemp/bin; sudo ./uemp 1 0"
+
+sitpath:
+  uev_localpubsub : "cd /home/amtvphy/dev_jan19/amantya/5G/VPHY/pubsub/localPubSub/build; sudo ./localPubSub"
+  uev_csm : "cd /home/amtvphy/dev_jan19/amantya/5G/VPHY/csm/build; sudo ./csm"
+  uev_uemp : "cd /home/amtvphy/dev_jan19/amantya/5G/VPHY/uemp/build; sudo ./uemp 1 0"
+
+
+devbinary :
+  path : "/home/namang@Netprizm.local"
+  dn_ip : "10.20.249.11"
+  chv_ip : "10.20.249.12"
+  gctpath : "/home/namang@Netprizm.local/gctue_nr_v3.1.1-RC/ap"
+
+sitbinary :
+  path : "gct_ue_v2.0.5.1/ap"
+  dn_ip : "10.20.249.31"
+  gctpath : "/home/amtvphy/gct_ue_v2.0.5.1/ap"
+  chv_ip : " "
+
+iperf :
+  dlportlist : ["8001","8002","8003","8004","8005","8006","8007"]
+  ulportlist : ["7001","7002","7003","7004","7005","7006","7007"]
+
+devlogfile :
+  logfilepath: "/home/namang@Netprizm.local/MUSCRIPT_multiUE_V01/logs/"
+
+sitlogfile:
+ logfilepath: "/home/singhsh2@Netprizm.local/MUSCRIPT_multiUE_V01/logs/"
+  
+  
+UEs:
+  Ue_ip_1 :  "10.20.249.5"
+  Ue_ip_2 :  "10.20.249.6"
+  Ue_ip_3 :  "10.20.249.7"
+  Ue_ip_4 :  "10.20.249.8"
+  Ue_ip_5 :  "10.20.249.9"
+
+
+sitUE :
+  Ue_ip_1 :  "10.20.249.22"
+  Ue_ip_2 :  "10.20.249.24"
+  Ue_ip_3 :  "10.20.249.26"
+  Ue_ip_4 :  "10.20.249.28"
+  Ue_ip_5 :  "10.20.249.29"
+  Ue_ip_6 :  "10.20.249.33"
+  
+
+
+devcommands:
+  attachcommand : "cd /home/namang@Netprizm.local/MUSCRIPT_multiUE_V01;sudo python3 Attach_multiUE.py"
+  uplinkcommand : "cd /home/namang@Netprizm.local/MUSCRIPT_multiUE_V01;sudo python3 Uplink_multiUE.py"
+  downlinkcommand : "cd /home/namang@Netprizm.local/MUSCRIPT_multiUE_V01;sudo python3 Downlink_multiUE.py"
+
+
+sitcommands:
+  attachcommand : "cd /home/amtvphy/MUSCRIPT_multiUE_V01;python3 Attach_multiUE.py"
+  uplinkcommand : "cd /home/amtvphy/MUSCRIPT_multiUE_V01;sudo python3 Uplink_multiUE.py"
+  downlinkcommand : "cd /home/amtvphy/MUSCRIPT_multiUE_V01;sudo python3 Downlink_multiUE.py"
+
